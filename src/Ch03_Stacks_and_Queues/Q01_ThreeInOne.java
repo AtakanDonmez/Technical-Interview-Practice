@@ -4,7 +4,7 @@ import java.util.EmptyStackException;
 
 import CtCILibrary.AssortedMethods;
 
-public class Q03_ThreeInOne {
+public class Q01_ThreeInOne {
     /* StackInfo is a simple class that holds a set of data about
      * each stack. It does not hold the actual items in the stack.
      * We could have done this with just a bunch of individual
@@ -51,7 +51,7 @@ public class Q03_ThreeInOne {
     private StackInfo[] info;
     private int[] values;
 
-    public Q03_ThreeInOne(int numberOfStacks, int defaultSize) {
+    public Q01_ThreeInOne(int numberOfStacks, int defaultSize) {
         /* Create metadata for all the stacks. */
         info = new StackInfo[numberOfStacks];
         for (int i = 0; i < numberOfStacks; i++) {
