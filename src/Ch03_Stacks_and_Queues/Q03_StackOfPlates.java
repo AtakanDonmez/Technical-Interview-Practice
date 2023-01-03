@@ -4,20 +4,20 @@ import java.util.Stack;
 
 public class Q03_StackOfPlates {
     public static class SetOfStacks {
-        private final int maxSize = 5;
 
-        private Stack<Stack<Integer>> set;
+        private final Stack<Stack<Integer>> set;
         private int size;
 
         public SetOfStacks(){
-            set = new Stack<Stack<Integer>>();
-            set.push(new Stack<Integer>());
+            set = new Stack<>();
+            set.push(new Stack<>());
             size = 0;
         }
 
         public void push(Integer data){
+            int maxSize = 5;
             if (set.peek().size() == maxSize){
-                Stack<Integer> newStack = new Stack<Integer>();
+                Stack<Integer> newStack = new Stack<>();
                 newStack.push(data);
                 set.push(newStack);
             } else {
