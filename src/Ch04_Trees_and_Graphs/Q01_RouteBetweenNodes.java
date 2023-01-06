@@ -9,9 +9,9 @@ public class Q01_RouteBetweenNodes {
         Unvisited, Visited, Visiting;
     }
     static class Node {
-        private Node adjacent[];
+        private final Node[] adjacent;
         public int adjacentCount;
-        private String vertex;
+        private final String vertex;
         public State state;
         public Node(String vertex, int adjacentLength) {
             this.vertex = vertex;
@@ -37,7 +37,7 @@ public class Q01_RouteBetweenNodes {
     }
     static class Graph {
         public static int MAX_VERTICES = 6;
-        private Node vertices[];
+        private final Node[] vertices;
         public int count;
         public Graph() {
             vertices = new Node[MAX_VERTICES];
@@ -58,7 +58,7 @@ public class Q01_RouteBetweenNodes {
         }
     }
 
-    public static void main(String a[])
+    public static void main(String[] a)
     {
         Graph g = createNewGraph();
         Node[] n = g.getNodes();
@@ -68,7 +68,7 @@ public class Q01_RouteBetweenNodes {
     }
 
     private static boolean search(Graph g, Node start, Node end) {
-        Queue<Node> queue = new LinkedList<Node>();
+        Queue<Node> queue = new LinkedList<>();
         start.state = State.Visited;
         queue.add(start);
 
