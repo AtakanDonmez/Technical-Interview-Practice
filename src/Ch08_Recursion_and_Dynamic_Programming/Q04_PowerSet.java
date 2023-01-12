@@ -12,6 +12,9 @@ public class Q04_PowerSet {
 
     public static void getSubsets(ArrayList<Integer> list, ArrayList<ArrayList<Integer>> subsets, ArrayList<Integer> prefix, int index){
         if (index == list.size()){
+            if (prefix.size() == 0){
+                subsets.add(new ArrayList<Integer>());
+            }
             return;
         }
 
